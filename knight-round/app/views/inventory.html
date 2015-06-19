@@ -1,0 +1,7 @@
+<div ng-include="'components/menu.html'"></div>
+
+<h1>Inventory</h1>
+
+<ul>
+	<li ng-repeat="item in items track by $index">{{ item.name}}</li>
+</ul>

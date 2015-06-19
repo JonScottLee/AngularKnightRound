@@ -1,0 +1,17 @@
+<div ng-include="'components/menu.html'"></div>
+
+<h1>Fight</h1>
+
+<!-- Player -->
+<h2>{{ playerName }}</h2>
+<div class="module module--player">
+	<div circle-progress data-start="1" data-duration="0" data-easing="linear" data-color1="#d56858" data-color2="#43a8b1" data-value="{{ playerHP / 100}}"><h3 class="progress__hp">{{ playerHP }}</h3></div>
+</div>
+
+<a href="#/fight"><button>Attack the Slime</button></a>
+
+<!-- Enemy -->
+<div class="module module--enemy">
+	<h4>Slime</h4>
+	<div circle-progress data-size="150" data-thickness="10" data-reverse="true" data-duration="1200" data-easing="linear" data-color1="#e58d2d" data-color2="#beb954" data-value="1"><h3 class="progress__hp">100</h3></div>
+</div>

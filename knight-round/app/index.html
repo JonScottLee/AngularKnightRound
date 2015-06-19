@@ -1,0 +1,53 @@
+<!doctype html>
+<html ng-app="knightRoundAngularApp">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Knight of the Round</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="styles/main.css">
+         <link rel="stylesheet" href="styles/kube.css">
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+    </head>
+
+    <body ng-app="knightRoundAngularApp" class="flex-column">
+
+        <div ng-view="" class="wrapper--main"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+
+        <!-- Entry Point -->
+        <script src="scripts/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="scripts/controllers/movies.js"></script>
+        <script src="scripts/controllers/watchlist.js"></script>
+        <script src="scripts/controllers/fight.js"></script>
+        <script src="scripts/controllers/inventory.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/shop.js"></script>
+        <script src="scripts/controllers/skills.js"></script>
+        <script src="scripts/controllers/options.js"></script>
+        <script src="scripts/controllers/shop.js"></script>
+        
+        <!-- Services -->
+        <script src="scripts/services/movies.js"></script>
+        <script src="scripts/services/watchlist.js"></script>
+        <script src="scripts/services/inventory.js"></script>
+        <script src="scripts/services/fight.js"></script>
+        <script src="scripts/services/player.js"></script>
+        <script src="scripts/services/shop.js"></script>
+    
+        <!-- Directives -->
+        <script src="scripts/directives/circleProgress.js"></script>
+
+        <!-- Libraries -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+        <script type="text/javascript" src="scripts/lib/circle-progress.js"></script>
+    </body>
+</html>

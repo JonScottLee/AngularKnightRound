@@ -1,0 +1,10 @@
+<div ng-include="'components/menu.html'"></div>
+
+<h1>Shop</h1>
+<div ng-init="generateShopItems()" class="module shop-module"></div>
+<!--<button ng-click="showShopItems()">View Shop Items</button>
+<button ng-click="showPlayerItems()">View Your Items</button>-->
+
+<ul>
+	<li ng-repeat="item in items track by $index">{{ item.name }} <button>Buy</button></li>
+</ul>

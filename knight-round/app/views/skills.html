@@ -1,0 +1,7 @@
+<div ng-include="'components/menu.html'"></div>
+
+<h1>Skills</h1>
+
+<ul>
+	<li ng-repeat="skill in skills track by $index">{{ skill.name}}</li>
+</ul>

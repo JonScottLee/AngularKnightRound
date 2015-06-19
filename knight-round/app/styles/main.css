@@ -1,0 +1,54 @@
+body {
+	background: #f1f1ea;
+	color: #333;
+	font-family: sans-serif;
+}
+
+/*--------------------*/
+/* main nav ----------*/
+/*--------------------*/
+.main-nav {
+	margin: 20px 0;
+}
+	.main-nav__link {
+		display: inline-block;
+		margin: 0 3px;
+	}
+/* end main nav */
+
+/*--------------------*/
+/* main structure ----*/
+/*--------------------*/
+.wrapper--main {
+	max-width: 600px;
+	text-align: center;
+	margin: 0 auto;
+}
+/* end main structure */
+
+/*--------------------*/
+/* progress bars -----*/
+/*--------------------*/
+[circle-progress] {
+	margin: 20px 0;
+	position: relative;
+}
+[circle-progress] > canvas {
+	margin: 0 auto;
+	transform: scale(-1, 1);
+}
+[circle-progress] > h3 {
+	position: absolute;
+	top: 42%;
+	left: 42%;
+}
+
+/*-------------------*/
+/* Fight ------------*/
+/*-------------------*/
+.progress__hp:after {
+	content: '%';
+}
+.module--enemy {
+	margin-top: 40px;
+}
