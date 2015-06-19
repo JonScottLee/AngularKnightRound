@@ -9,11 +9,7 @@ angular
 
 			krPlayer.name = 'Jon';
 			krPlayer.HP = 95;
-			krPlayer.items = [
-				{ 'name': 'Mithglin Rapier' },
-				{ 'name': 'Jade-Studded Augmented Chain Armor' },
-				{ 'name': 'Coat of Midnight' }
-			];
+			krPlayer.items = [];
 			krPlayer.skills = [
 				{ 'name': 'Rage' },
 				{ 'name': 'Unstable' },
@@ -47,5 +43,19 @@ angular
 		this.playerExists = function () {
 			return localStorage.getItem('knightRoundPlayer') !== null;
 		};
+
+		/* Inventory Methods */
+		this.removeItem = function (item, idx) {
+			var currentPlayer = this.getData();
+			currentPlayer.items.splice(idx, 1);			
+			this.savePlayer(currentPlayer);
+		}
+
+		this.addItem = function (item) {
+			var currentPlayer = this.getData();
+			currentPlayer.items.push(item);
+			this.savePlayer(currentPlayer);
+		};
+		/* End Inventory Methods */
 
 	});

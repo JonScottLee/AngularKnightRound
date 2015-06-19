@@ -5,6 +5,8 @@
 <!--<button ng-click="showShopItems()">View Shop Items</button>
 <button ng-click="showPlayerItems()">View Your Items</button>-->
 
+<button ng-click="showPlayerItems()">View Your Items</button>
+
 <ul>
-	<li ng-repeat="item in items track by $index">{{ item.name }} <button>Buy</button></li>
+	<li ng-repeat="item in items track by $index">{{ item.name }} <button ng-click="buyItem()">Buy</button></li>
 </ul>

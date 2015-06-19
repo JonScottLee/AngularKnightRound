@@ -3,5 +3,5 @@
 <h1>Inventory</h1>
 
 <ul>
-	<li ng-repeat="item in items track by $index">{{ item.name}}</li>
+	<li ng-repeat="item in items track by $index">{{ item.name}} <button ng-click="useItem()">Use</button> <button ng-click="dropItem()">Drop</button></li>
 </ul>

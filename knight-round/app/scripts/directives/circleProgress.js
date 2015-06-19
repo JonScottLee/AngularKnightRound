@@ -24,13 +24,9 @@ angular
 				})
 				.on('circle-animation-progress', function(event, progress, stepValue) {
 					var $hpEl = $(this).find('.progress__hp');
-					
+
 					if ($hpEl.length) {
-						$hpEl.text(parseInt(String(stepValue.toFixed(2)).substr(1) * 100), 10);
-				
-						if (progress === 1 && $hpEl.text() === '0') {
-							$hpEl.text('100');
-						}
+						$hpEl.text(Math.floor(progress.toFixed(2) * $(this).attr('data-numbertotal')));
 					}
 				});
 			}

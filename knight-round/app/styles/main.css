@@ -32,6 +32,7 @@ body {
 [circle-progress] {
 	margin: 20px 0;
 	position: relative;
+	display: inline-block;
 }
 [circle-progress] > canvas {
 	margin: 0 auto;
@@ -39,15 +40,19 @@ body {
 }
 [circle-progress] > h3 {
 	position: absolute;
-	top: 42%;
-	left: 42%;
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	top: 50%;
+	left: 0;
+	margin-top: -11px;
 }
 
 /*-------------------*/
 /* Fight ------------*/
 /*-------------------*/
 .progress__hp:after {
-	content: '%';
+
 }
 .module--enemy {
 	margin-top: 40px;

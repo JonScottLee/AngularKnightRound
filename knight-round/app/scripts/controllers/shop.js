@@ -2,20 +2,17 @@
 
 angular
 	.module('knightRoundAngularApp')
-	.controller('ShopCtrl', function ($scope, Shop) {
+	.controller('ShopCtrl', function ($scope, $route, Shop, Inventory, Player) {
 
-		$scope.generateShopItems = function () {
-			console.info('generate shop items');
-		};
+		$scope.items = Shop.items;
 
-		$scope.showShopItems = function () {
-			console.info('show the shop\'s items');
+		$scope.buyItem = function () {
+			Player.addItem(this.item);
 		};
 
 		$scope.showPlayerItems = function () {
-			console.info('show the player\'s items');
+			$scope.items = Player.getData().items;
+			$route.reload();
 		};
-
-		$scope.items = Shop.items;
 
 	});
