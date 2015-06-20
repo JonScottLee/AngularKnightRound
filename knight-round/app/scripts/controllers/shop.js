@@ -11,7 +11,9 @@ angular
 		$scope.Math = window.Math;
 
 		$scope.buyItem = function () {
-			Player.addItem(this.item);
+			Player.addItem(this.item, 'buy');
+			$scope.playerGold = Player.getData().gold;
+			$route.reload();
 		};
 
 		$scope.sellItem = function () {

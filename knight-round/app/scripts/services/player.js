@@ -10,7 +10,7 @@ angular
 			krPlayer.name = 'Jon';
 			krPlayer.HP = 95;
 			krPlayer.items = [];
-			krPlayer.gold = 0;
+			krPlayer.gold = 1000;
 			krPlayer.skills = [
 				{ 'name': 'Rage' },
 				{ 'name': 'Unstable' },
@@ -45,7 +45,9 @@ angular
 			return localStorage.getItem('knightRoundPlayer') !== null;
 		};
 
+		/*-------------------*/
 		/* Inventory Methods */
+		/*-------------------*/
 		this.removeItem = function (item, idx, sell) {
 			var currentPlayer = this.getData();
 			currentPlayer.items.splice(idx, 1);
@@ -57,11 +59,18 @@ angular
 			this.savePlayer(currentPlayer);
 		}
 
-		this.addItem = function (item) {
+		this.addItem = function (item, buy) {
 			var currentPlayer = this.getData();
 			currentPlayer.items.push(item);
+
+			if (buy === 'buy') {
+				currentPlayer.gold -= item.value;
+			}
+
 			this.savePlayer(currentPlayer);
 		};
+		/*-----------------------*/
 		/* End Inventory Methods */
+		/*-----------------------*/
 
 	});

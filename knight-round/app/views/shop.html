@@ -8,7 +8,7 @@
 <button ng-click="showPlayerItems()">View Your Items</button>
 
 <ul>
-	<li ng-repeat="item in items track by $index">{{ item.name }} <button ng-disabled="{{ item.value > playerGold }}" ng-show="showBuyButton" ng-click="buyItem()">Buy</button><button ng-show="showSellButton" ng-click="sellItem()">Sell for {{ Math.ceil(item.value / sellRatio) }} gold</button></li>
+	<li ng-repeat="item in items track by $index">{{ item.name }} <button ng-disabled="{{ item.value > playerGold }}" ng-show="showBuyButton" ng-click="buyItem()">Buy for {{ item.value }}</button><button ng-show="showSellButton" ng-click="sellItem()">Sell for {{ Math.ceil(item.value / sellRatio) }} gold</button></li>
 </ul>
 
 <h4>Your gold: {{ playerGold }}
