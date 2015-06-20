@@ -12,7 +12,10 @@ angular
 
 		$scope.showPlayerItems = function () {
 			$scope.items = Player.getData().items;
-			$route.reload();
+		};
+
+		$scope.showShopItems = function () {
+			$scope.items = Shop.items;
 		};
 
 	});

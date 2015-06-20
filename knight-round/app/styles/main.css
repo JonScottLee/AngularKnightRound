@@ -52,7 +52,7 @@ body {
 /* Fight ------------*/
 /*-------------------*/
 .progress__hp:after {
-
+	content: ' hp';
 }
 .module--enemy {
 	margin-top: 40px;
