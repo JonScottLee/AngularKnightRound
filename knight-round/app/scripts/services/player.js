@@ -8,7 +8,7 @@ angular
 			var krPlayer = {};
 
 			krPlayer.name = 'Jon';
-			krPlayer.HP = 95;
+			krPlayer.HP = 20;
 			krPlayer.items = [];
 			krPlayer.gold = 1000;
 			krPlayer.skills = [
