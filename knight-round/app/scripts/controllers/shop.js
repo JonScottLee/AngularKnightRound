@@ -8,6 +8,7 @@ angular
 		$scope.showBuyButton = true;
 		$scope.playerGold = Player.getData().gold;
 		$scope.sellRatio = 1.5;
+		$scope.shopName = 'Shop\'s Items';
 		$scope.Math = window.Math;
 
 		$scope.buyItem = function () {
@@ -26,12 +27,14 @@ angular
 			$scope.items = Player.getData().items;
 			$scope.showSellButton = true;
 			$scope.showBuyButton = false;
+			$scope.shopName = 'Your Items';
 		};
 
 		$scope.showShopItems = function () {
 			$scope.items = Shop.items;
 			$scope.showSellButton = false;
 			$scope.showBuyButton = true;
+			$scope.shopName = 'Shop\'s Items';
 		};
 
 	});

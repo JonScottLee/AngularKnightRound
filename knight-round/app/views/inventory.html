@@ -2,6 +2,8 @@
 
 <h1>Inventory</h1>
 
-<ul>
-	<li ng-repeat="item in items track by $index">{{ item.name}} <button ng-click="useItem()">Use</button> <button ng-click="dropItem()">Drop</button></li>
+<ul class="items-list">
+	<li class="items-list__item" ng-repeat="item in items track by $index">{{ item.name}} <button ng-click="useItem()">Use</button> <button ng-click="dropItem()">Drop</button></li>
+
+	<li class="items-list__item" ng-show="!items.length">You have no items</li>
 </ul>
