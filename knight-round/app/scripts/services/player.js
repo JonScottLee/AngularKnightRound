@@ -10,6 +10,7 @@ angular
 			krPlayer.name = 'Jon';
 			krPlayer.HP = 95;
 			krPlayer.items = [];
+			krPlayer.gold = 0;
 			krPlayer.skills = [
 				{ 'name': 'Rage' },
 				{ 'name': 'Unstable' },
@@ -45,9 +46,14 @@ angular
 		};
 
 		/* Inventory Methods */
-		this.removeItem = function (item, idx) {
+		this.removeItem = function (item, idx, sell) {
 			var currentPlayer = this.getData();
-			currentPlayer.items.splice(idx, 1);			
+			currentPlayer.items.splice(idx, 1);
+
+			if (sell === 'sell') {
+				currentPlayer.gold += Math.ceil(item.value / 1.5);
+			}
+
 			this.savePlayer(currentPlayer);
 		}
 

@@ -5,9 +5,9 @@ angular
 	.service('Shop', function () {
 
 		this.items = [
-			{ 'name': 'Potion' },
-			{ 'name': 'Hi-Potion' },
-			{ 'name': 'Phoenix Down' }
+			{ 'name': 'Potion', 'value': 10 },
+			{ 'name': 'Hi-Potion', 'value': 50},
+			{ 'name': 'Phoenix Down', 'value': 500 }
 		];
 
 	});

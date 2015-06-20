@@ -6,9 +6,18 @@ angular
 
 		$scope.items = Shop.items;
 		$scope.showBuyButton = true;
+		$scope.playerGold = Player.getData().gold;
+		$scope.sellRatio = 1.5;
+		$scope.Math = window.Math;
 
 		$scope.buyItem = function () {
 			Player.addItem(this.item);
+		};
+
+		$scope.sellItem = function () {
+			Player.removeItem(this.item, this.$index, 'sell');
+			$scope.items  = Player.getData().items;
+			$scope.playerGold = Player.getData().gold;
 		};
 
 		$scope.showPlayerItems = function () {

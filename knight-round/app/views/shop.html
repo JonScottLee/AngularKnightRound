@@ -1,13 +1,14 @@
 <div ng-include="'components/menu.html'"></div>
 
 <h1>Shop</h1>
+
 <div ng-init="generateShopItems()" class="module shop-module"></div>
-<!--<button ng-click="showShopItems()">View Shop Items</button>
-<button ng-click="showPlayerItems()">View Your Items</button>-->
 
 <button ng-click="showShopItems()">View Shop Items</button>
 <button ng-click="showPlayerItems()">View Your Items</button>
 
 <ul>
-	<li ng-repeat="item in items track by $index">{{ item.name }} <button ng-show="showBuyButton" ng-click="buyItem()">Buy</button><button ng-show="showSellButton">Sell</button></li>
+	<li ng-repeat="item in items track by $index">{{ item.name }} <button ng-show="showBuyButton" ng-click="buyItem()">Buy</button><button ng-show="showSellButton" ng-click="sellItem()">Sell for {{ Math.ceil(item.value / sellRatio) }} gold</button></li>
 </ul>
+
+<h4>Your gold: {{ playerGold }}
