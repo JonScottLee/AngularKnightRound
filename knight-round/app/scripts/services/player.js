@@ -57,7 +57,7 @@ angular
 			}
 
 			this.savePlayer(currentPlayer);
-		}
+		};
 
 		this.addItem = function (item, buy) {
 			var currentPlayer = this.getData();

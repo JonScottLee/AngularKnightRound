@@ -8,7 +8,7 @@ angular
 			{
 				'name': 'Potion',
 				'value': 10,
-				'consumable': true,
+				'conumable': true,
 				'type': 1,
 				'strength': 10
 			},
@@ -20,6 +20,26 @@ angular
 				'strength': 150
 			},
 			{ 'name': 'Phoenix Down', 'value': 500 }
+		];
+
+		this.weapons = [
+			{
+				'name': 'Copper Sword',
+				'value': 120,
+				'consumable': false,
+				'wearable': true,
+				'dmg': 12
+			}
+		];
+
+		this.armor = [
+			{
+				'name': 'Leather Armor',
+				'value': 240,
+				'consumable': false,
+				'wearable': true,
+				'def': 20
+			}
 		];
 
 	});

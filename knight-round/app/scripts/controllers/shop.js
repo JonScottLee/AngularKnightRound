@@ -37,4 +37,16 @@ angular
 			$scope.shopView = 'Buy';
 		};
 
+		$scope.showItems = function () {
+			$scope.items = Shop.items;
+		};
+
+		$scope.showWeapons = function () {
+			$scope.items = Shop.weapons;
+		};
+
+		$scope.showArmor = function () {
+			$scope.items = Shop.armor;
+		};
+
 	});

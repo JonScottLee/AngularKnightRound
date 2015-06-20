@@ -22,7 +22,8 @@ module.exports = function(grunt) {
           angular: true,
           localStorage: true,
           browser: true,
-          $: true
+          $: true,
+          window: true
         }
       }
     },

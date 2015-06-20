@@ -7,6 +7,12 @@
 <button ng-click="showShopItems()">Buy Items</button>
 <button ng-click="showPlayerItems()">Sell Items</button>
 
+<ul>
+	<li ng-click="showItems()">Items</li>
+	<li ng-click="showWeapons()">Weapons</li>
+	<li ng-click="showArmor()">Armor</li>
+</ul>
+
 <ul class="shop__items items-list">
 	<li class="shop__item items-list__item" ng-repeat="item in items track by $index">{{ item.name }} <button ng-disabled="{{ item.value > playerGold }}" ng-show="showBuyButton" ng-click="buyItem()">Buy for {{ item.value }}</button><button ng-show="showSellButton" ng-click="sellItem()">Sell for {{ Math.ceil(item.value / sellRatio) }} gold</button></li>
 
