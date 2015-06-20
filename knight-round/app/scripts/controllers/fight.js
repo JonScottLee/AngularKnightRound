@@ -2,11 +2,25 @@
 
 angular
 	.module('knightRoundAngularApp')
-	.controller('FightCtrl', function ($scope, Player) {
-		var krPlayer = Player.getData();
+	.controller('FightCtrl', function ($scope, $route, Player, Monster) {
+		var krPlayer = Player.getData(),
+			dmg = Player.getData().DMG;
 
+		// Player vars
 		$scope.playerName = krPlayer.name;
 		$scope.playerHP = krPlayer.HP;
-		$scope.monsterHP = 60;
 		$scope.items = Player.getData().items;
+		
+		// Monster vars
+		$scope.monsterName = Monster.getData().name;
+		$scope.monsterMaxHP = Monster.getData().maxHP;
+		$scope.monsterCurrentHP = Monster.getData().currentHP;
+
+		$scope.attackEnemy = function () {
+			var $monsterHPEl = $('.module--enemy').find('[circle-progress]');
+			
+			Monster.takeDamage();
+			$monsterHPEl.circleProgress('value', Monster.getData().currentHP / Monster.getData().maxHP);
+			$scope.monsterCurrentHP = Monster.getData().currentHP;
+		};
 	});

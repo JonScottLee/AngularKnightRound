@@ -3,11 +3,11 @@
 <!-- Player -->
 <div ng-include="'components/circle--player.html'"></div>
 
-<a href="#/fight"><button>Attack the Slime</button></a>
+<a href="#/fight"><button ng-click="attackEnemy()">Attack the {{ monsterName }}</button></a>
 
 <!-- Enemy -->
 <div ng-include="'components/circle--enemy.html'"></div>
 
 <ul class="items-list">
-	<li class="items-list__item" ng-show="item.consumable" ng-repeat="item in items track by $index">{{ item.name}} <button ng-show="item.consumable" ng-click="useItem()">Use</button> <button ng-click="dropItem()">Drop</button><button ng-show="item.wearable">Equip</button></li>
+	<li class="items-list__item" ng-show="item.consumable" ng-repeat="item in items track by $index">{{ item.name}} <button ng-show="item.consumable" ng-click="useItem()">Use</button></li>
 </ul>

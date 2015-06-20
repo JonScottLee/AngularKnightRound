@@ -25,8 +25,10 @@ angular
 				.on('circle-animation-progress', function(event, progress, stepValue) {
 					var $hpEl = $(this).find('.progress__hp');
 
+					console.info(stepValue, $(this).attr('data-numbertotal'));
+
 					if ($hpEl.length) {
-						$hpEl.text(Math.floor(progress.toFixed(2) * $(this).attr('data-numbertotal')));
+						$hpEl.text(Math.floor(stepValue.toFixed(2) * $(this).attr('data-numbertotal')));
 					}
 				});
 			}

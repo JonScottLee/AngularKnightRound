@@ -9,6 +9,7 @@ angular
 
 			krPlayer.name = 'Jon';
 			krPlayer.HP = 20;
+			krPlayer.DMG = 10;
 			krPlayer.items = [];
 			krPlayer.gold = 1000;
 			krPlayer.skills = [
