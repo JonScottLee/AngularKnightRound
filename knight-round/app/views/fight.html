@@ -9,5 +9,5 @@
 <div ng-include="'components/circle--enemy.html'"></div>
 
 <ul class="items-list">
-	<li class="items-list__item" ng-show="item.consumable" ng-repeat="item in items track by $index">{{ item.name}} <button ng-show="item.consumable" ng-click="useItem()">Use</button></li>
+	<li class="items-list__item" ng-show="item.consumable" ng-repeat="item in items track by $index">{{ item.name}} <button ng-click="useItem()">Use</button></li>
 </ul>

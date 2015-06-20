@@ -8,7 +8,7 @@ angular
 			{
 				'name': 'Potion',
 				'value': 10,
-				'conumable': true,
+				'consumable': true,
 				'type': 1,
 				'strength': 10
 			},

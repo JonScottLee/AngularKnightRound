@@ -3,8 +3,7 @@
 angular
 	.module('knightRoundAngularApp')
 	.controller('FightCtrl', function ($scope, $route, Player, Monster) {
-		var krPlayer = Player.getData(),
-			dmg = Player.getData().DMG;
+		var krPlayer = Player.getData();
 
 		// Player vars
 		$scope.playerName = krPlayer.name;
