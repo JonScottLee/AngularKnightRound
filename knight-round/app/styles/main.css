@@ -91,6 +91,10 @@ body {
 	.takeover > div {
 		height: 100%;
 	}
+	.takeover__module {
+		transition: all 600ms cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+		transition-delay: 100ms;
+	}
 	.takeover.ng-hide:not(.ng-hide-animate) {
 		display: block !important;
 	}
@@ -104,6 +108,9 @@ body {
 }
 .takeover.ng-hide {
 	transform: translate3d(0, 0, 0);
+}
+.takeover.ng-hide .takeover__module {
+	transform: translate3d(100px, 0, 0);
 }
 .takeover__close {
 	position: absolute;
