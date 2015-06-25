@@ -1,4 +1,5 @@
 <div ng-include="'components/menu.html'"></div>
+<div ng-include="'components/takeover--equipment.html'"></div>
 
 <h1>Inventory</h1>
 
@@ -9,13 +10,3 @@
 
 	<li class="items-list__item" ng-show="!items.length">You have no items</li>
 </ul>
-
-<div ng-show="showEquipment" class="takeover takeover-right">
-	<div ng-click="hideEquipped()" class="takeover__close">Close</div>
-	<div class="takeover__modules takeover__modules--2col t-takeover__modules--medgray">
-		<div class="takeover__module">Helmet</div>
-		<div class="takeover__module">Armor</div>
-		<div class="takeover__module">Left Hand</div>
-		<div class="takeover__module">Right Hand</div>
-	</div>
-</div>

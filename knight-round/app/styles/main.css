@@ -115,15 +115,16 @@ body {
 }
 /* End Takeover Right */
 
-/* Color Schemes */
-.t-takeover__modules--medgray > div {
-	background: #aaa;
-}
-
 /* Takeover 2x2 */
-.takeover__modules--2col > div {
-	width: 47%;
-	margin: 1.5%;
-	height: 47%;
-	border-radius: 6px;
+.takeover__module {
+	box-sizing: border-box;
+	width: 50%;
+	height: 50%;
+	padding: 10px;
 }
+	.takeover__module > div {
+		height: 100%;
+		padding: 10px;
+		background: #aaa;
+		border-radius: 3px;
+	}
