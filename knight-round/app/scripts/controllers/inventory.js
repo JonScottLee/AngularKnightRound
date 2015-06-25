@@ -6,6 +6,7 @@ angular
 
 		$scope.items = Player.getData().items;
 		$scope.showEquipment = false;
+		$scope.scale = 100;
 
 		$scope.dropItem = function () {
 			Player.removeItem(this.item, this.$index);
@@ -14,10 +15,12 @@ angular
 
 		$scope.showEquipped = function () {
 			$scope.showEquipment = true;
+			$scope.scale = 90;
 		};
 
 		$scope.hideEquipped = function () {
 			$scope.showEquipment = false;
+			$scope.scale = 100;
 		};
 
 	});
