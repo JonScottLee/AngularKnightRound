@@ -5,6 +5,7 @@ angular
 	.controller('ShopCtrl', function ($scope, $route, Shop, Inventory, Player) {
 
 		$scope.items = Shop.items;
+		$scope.showItems = false;
 		$scope.showBuyButton = true;
 		$scope.playerGold = Player.getData().gold;
 		$scope.sellRatio = 1.5;
@@ -27,26 +28,46 @@ angular
 			$scope.items = Player.getData().items;
 			$scope.showSellButton = true;
 			$scope.showBuyButton = false;
-			$scope.shopView = 'Sell';
+			$scope.showItems = true;
+			$scope.opacity = 10;
+		};
+
+		$scope.showEquipped = function () {
+			$scope.showEquipment = true;
+			$scope.scale = 90;
+		};
+
+		$scope.hideEquipped = function () {
+			$scope.showEquipment = false;
+			$scope.scale = 100;
 		};
 
 		$scope.showShopItems = function () {
-			$scope.items = Shop.items;
+			$scope.showItems = true;
 			$scope.showSellButton = false;
 			$scope.showBuyButton = true;
-			$scope.shopView = 'Buy';
+			$scope.opacity = 10;
 		};
 
-		$scope.showItems = function () {
-			$scope.items = Shop.items;
-		};
+		$scope.hideShopItems = function () {
+			$scope.showItems = false;
+			$scope.opacity = 100;
+		}
 
-		$scope.showWeapons = function () {
+		$scope.showShopWeapons = function () {
 			$scope.items = Shop.weapons;
+			$scope.showItems = true;
+			$scope.showSellButton = false;
+			$scope.showBuyButton = true;
+			$scope.opacity = 10;
 		};
 
-		$scope.showArmor = function () {
+		$scope.showShopArmor = function () {
 			$scope.items = Shop.armor;
+			$scope.showItems = true;
+			$scope.showSellButton = false;
+			$scope.showBuyButton = true;
+			$scope.opacity = 10;
 		};
 
 	});

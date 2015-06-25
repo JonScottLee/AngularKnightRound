@@ -1,13 +1,15 @@
-<div ng-include="'components/menu.html'"></div>
+<div class="scale scale--{{ scale || 100 }}">
+	<div ng-include="'components/menu.html'"></div>
 
-<!-- Player -->
-<div ng-include="'components/circle--player.html'"></div>
+	<!-- Player -->
+	<div ng-include="'components/circle--player.html'"></div>
 
-<a href="#/fight"><button ng-click="attackEnemy()">Attack the {{ monsterName }}</button></a>
+	<a href="#/fight"><button ng-click="attackEnemy()">Attack the {{ monsterName }}</button></a>
 
-<!-- Enemy -->
-<div ng-include="'components/circle--enemy.html'"></div>
+	<!-- Enemy -->
+	<div ng-include="'components/circle--enemy.html'"></div>
 
-<ul class="items-list">
-	<li class="items-list__item" ng-show="item.consumable" ng-repeat="item in items track by $index">{{ item.name}} <button ng-click="useItem()">Use</button></li>
-</ul>
+	<ul class="items-list">
+		<li class="items-list__item" ng-show="item.consumable" ng-repeat="item in items track by $index">{{ item.name}} <button ng-click="useItem()">Use</button></li>
+	</ul>
+</div>

@@ -6,7 +6,6 @@ angular
 
 		$scope.items = Player.getData().items;
 		$scope.showEquipment = false;
-		$scope.scale = 100;
 
 		$scope.dropItem = function () {
 			Player.removeItem(this.item, this.$index);

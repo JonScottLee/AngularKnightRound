@@ -1,11 +1,12 @@
-<div ng-include="'components/menu.html'"></div>
+<div class="scale scale--{{ scale || 100 }}">
+	<div ng-include="'components/menu.html'"></div>
 
-<div ng-init="generatePlayer()" class="player-module module"></div>
+	<div ng-init="generatePlayer()" class="player-module module"></div>
 
-<h2>{{ playerName }}</h2>
-<div class="module module--player">
-	<div circle-progress data-start="1" data-duration="0" data-easing="linear" data-color1="#43a8b1" data-color2="#d56858" data-value="{{ playerHP / 100 }}"><h3 class="progress__hp">{{ playerHP }}</h3></div>
+	<h2>{{ playerName }}</h2>
+	<div class="module module--player">
+		<div circle-progress data-start="1" data-duration="0" data-easing="linear" data-color1="#43a8b1" data-color2="#d56858" data-value="{{ playerHP / 100 }}"><h3 class="progress__hp">{{ playerHP }}</h3></div>
+	</div>
+
+	<a href="#/fight"><button>Hunt for Monsters</button></a>
 </div>
-
-<a href="#/fight"><button>Hunt for Monsters</button></a>
-

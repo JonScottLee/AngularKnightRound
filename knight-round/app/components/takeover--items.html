@@ -1,0 +1,11 @@
+<div ng-show="showItems" class="takeover takeover-bottom">
+	<button ng-click="hideShopItems()" class="takeover__close">close</button>
+	<div class="takeover__modules takeover__modules--list takeover__modules--medgray">
+		<ul class="shop__items items-list">
+			<li class="shop__item items-list__item" ng-repeat="item in items track by $index">{{ item.name }} <button ng-disabled="{{ item.value > playerGold }}" ng-show="showBuyButton" ng-click="buyItem()">Buy for {{ item.value }}</button><button ng-show="showSellButton" ng-click="sellItem()">Sell for {{ Math.ceil(item.value / sellRatio) }} gold</button></li>
+
+			<li class="items-list__item" ng-show="!items.length">You have no items</li>
+
+		</ul>
+	</div>
+</div>
