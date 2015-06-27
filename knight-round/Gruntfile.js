@@ -48,6 +48,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-csslint');
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['watch', 'jshint', 'csslint']);
+  grunt.registerTask('default', ['watch', 'jshint']);
 
 };

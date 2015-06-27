@@ -1,6 +1,23 @@
-<div ng-show="showEquipment" class="takeover takeover-right">
+<div ng-show="showEquipment" class="takeover takeover-right takeover-gear">
 	<button ng-click="hideEquipped()" class="takeover__close">close</button>
+	
+	<ul class="items-list">
+		<li class="items-list__item" ng-show="item.wearable" ng-repeat="item in items track by $index">{{ item.name}}</li>
+	</ul>
+
 	<div class="takeover__modules takeover__modules--2col t-takeover__modules--medgray">
+		<div class="takeover__module">
+			<div></div>
+		</div>
+		<div class="takeover__module">
+			<div></div>
+		</div>
+		<div class="takeover__module">
+			<div></div>
+		</div>
+		<div class="takeover__module">
+			<div></div>
+		</div>
 		<div class="takeover__module">
 			<div></div>
 		</div>

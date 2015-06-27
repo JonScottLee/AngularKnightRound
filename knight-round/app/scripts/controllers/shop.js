@@ -51,7 +51,7 @@ angular
 		$scope.hideShopItems = function () {
 			$scope.showItems = false;
 			$scope.opacity = 100;
-		}
+		};
 
 		$scope.showShopWeapons = function () {
 			$scope.items = Shop.weapons;

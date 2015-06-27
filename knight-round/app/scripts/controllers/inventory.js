@@ -14,12 +14,12 @@ angular
 
 		$scope.showEquipped = function () {
 			$scope.showEquipment = true;
-			$scope.scale = 90;
+			$scope.opacity = 90;
 		};
 
 		$scope.hideEquipped = function () {
 			$scope.showEquipment = false;
-			$scope.scale = 100;
+			$scope.opacity = 100;
 		};
 
 	});

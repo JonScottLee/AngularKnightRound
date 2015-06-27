@@ -1,12 +1,12 @@
-<div class="scale scale--{{ scale || 1 }}">
+<div class="opacity opacity--{{ opacity || 1 }}">
 	<div ng-include="'components/menu.html'"></div>
 	
 	<h1>Inventory</h1>
 
-	<button ng-mousedown="showEquipped()">Show Equipped</button>
+	<button ng-mousedown="showEquipped()">Show Gear</button>
 
 	<ul class="items-list">
-		<li class="items-list__item" ng-repeat="item in items track by $index">{{ item.name}} <button ng-show="item.consumable" ng-click="useItem()">Use</button> <button ng-click="dropItem()">Drop</button><button ng-show="item.wearable" ng-mousedown="showEquipped()">Equip</button></li>
+		<li class="items-list__item" ng-show="item.consumable" ng-repeat="item in items track by $index">{{ item.name}} <button ng-show="item.consumable" ng-click="useItem()">Use</button> <button ng-click="dropItem()">Drop</button><button ng-show="item.wearable" data-dragabilly="test" ng-mousedown="showEquipped()">Equip</button></li>
 
 		<li class="items-list__item" ng-show="!items.length">You have no items</li>
 	</ul>

@@ -192,8 +192,6 @@ body {
 	z-index: 1;
 }
 
-/* End Takeover Right */
-
 /* Takeover 2x2 */
 .takeover__module {
 	box-sizing: border-box;
@@ -207,3 +205,29 @@ body {
 		background: #aaa;
 		border-radius: 3px;
 	}
+
+/*---------------*/
+/* Gear Takeover */
+/*---------------*/
+.takeover-gear .items-list {
+	font-size: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 39%;
+	overflow: scroll;
+	padding: 0;
+}
+	.takeover-gear .items-list__item {
+		padding: 10px;
+	}
+.takeover-gear .takeover__modules {
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+}
+.takeover-gear .takeover__module {
+	height: 25%;
+}
