@@ -15,7 +15,6 @@ angular
 		$scope.buyItem = function () {
 			Player.addItem(this.item, 'buy');
 			$scope.playerGold = Player.getData().gold;
-			$route.reload();
 		};
 
 		$scope.sellItem = function () {

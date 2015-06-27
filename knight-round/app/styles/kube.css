@@ -335,14 +335,6 @@ td,
 th {
   line-height: 1.65em;
 }
-ul,
-ol,
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin: 0 0 0 3.3em;
-}
 ul li,
 ol li {
   text-align: left;
@@ -3538,14 +3530,6 @@ ul.dropdown li.divider {
   }
   .lead {
     font-size: 1.2em;
-  }
-  ul,
-  ol,
-  ul ul,
-  ol ol,
-  ul ol,
-  ol ul {
-    margin-left: 1.65em;
   }
   blockquote {
     margin-left: 0;
